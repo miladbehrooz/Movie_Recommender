@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='./css/styles.css') }}">
+  <title>ALSTER Movie Recommender</title>
+</head>
+
+<body>
+    <div id = "leftbox">
+    </div>
+    <div id="main_body">
+    <h1>ALSTER Movie Recommender</h1>
+     <h3>We recommend watching the following movies</h3>
+     <div class="grid">
+        
+     {% for movie,poster in movies.items() %}
+     <a href="#" data-title='{{movie}}'>
+         <img src='{{poster}}' height=180px >
+     </a>
+     <br>
+     {% endfor %}
+    </div>
+    <p> Click <a href="/">here</a> to get to the homepage.</p>
+    </div>
+     
+    
+</body>
+</html>

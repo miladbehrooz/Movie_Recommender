@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='./css/styles.css') }}">
+  <title>ALSTER Movie Recommender</title>
+</head>
+
+<body>
+    <div id = "leftbox">
+    </div>
+    <div id="main_body">
+        <h1>ALSTER Movie Recommender</h1> 
+        <h3>Please write name of some movies to rate</h3>
+        <form action="/rating" method ="POST">
+            <input type="text" name="movielist" placeholder="List of movies">
+            <input type="submit" value="Next"  class='button'>
+        </form>
+        <p>
+        Note:Please separate the movies name with commas. (e.g.: Titanic, Toy Story, Inception)
+        </p>
+    </div>
+</body>
+
+
+</html>

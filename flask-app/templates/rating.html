@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href='/static/css/styles.css'>
+  <title>ALSTER Movie Recommender</title>
+</head>
+
+<body>
+    <div id = "leftbox">
+    </div> 
+    <div id="main_body">
+        <h1>ALSTER Movie Recommender</h1> 
+        <h3>Please rate your selected movies</h3>
+        <form action="/recommendations">
+            {% for movie in movie_list %}
+            <br>
+            {{movie}}
+            <input type="number" name="{{movie}}" min=0 max=5 step=0.5 value=0 required>
+            <br>
+            {% endfor %}
+            <br>
+            <input type="submit" value="Submit" class='button'>
+        </form>
+
+        <p>
+        Did you forget some movies? <br>
+        Click <a href="/">here</a> to back to the previous page.
+        </p>
+    </div>
+</body>
+
+</html>
